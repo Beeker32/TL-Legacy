@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+APP_DIR="$HOME/.tlauncher/bin"
+BOOTSTRAP="$APP_DIR/bootstrap.jar"
+SHARED_BOOTSTRAP="/usr/lib/legacylauncher/bootstrap.jar"
+
+[ ! -d "$APP_DIR" ] && echo "Creating app directory" && mkdir -p "$APP_DIR"
+[ ! -f "$BOOTSTRAP" ] && echo "Copying shared bootstrap" && cp "$SHARED_BOOTSTRAP" "$BOOTSTRAP"
+
+echo "Starting the launcher"
+java -jar "$BOOTSTRAP" "$@"
