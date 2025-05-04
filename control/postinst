@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+SHARED_BOOTSTRAP_DIR="/usr/lib/legacylauncher"
+SHARED_BOOTSTRAP="$SHARED_BOOTSTRAP_DIR/bootstrap.jar"
+
+echo "Downloading shared bootstrap"
+mkdir -p "$SHARED_BOOTSTRAP_DIR"
+
+for host in llaun.ch eu1.llaun.ch lln4.ru ru1.lln4.ru
+do
+    echo "Trying $host..."
+    wget https://$host/jar -O "$SHARED_BOOTSTRAP" && break
+done
+
+if [ ! -f "$SHARED_BOOTSTRAP" ]
+then
+    echo "Failed to download bootstrap" >&2
+    exit 1
+fi

@@ -1,0 +1,8 @@
+Package: legacylauncher
+Version: 1.0
+Architecture: all
+Depends: bash, wget, default-jre (>= 2:1.8) | java8-runtime
+Maintainer: Legacy Launcher Team <support@llaun.ch>
+Homepage: https://llaun.ch
+Description: Legacy Launcher is a simple, lightweight and yet highly customizeable alternative Minecraft launcher.
+ It features one-click installation for Forge, Optifine and Fabric, as well as optional per-version game profile folders, keeping data from different versions in different subfolders.
