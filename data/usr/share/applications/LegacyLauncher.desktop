@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Legacy Launcher
+Version=1.0
+Type=Application
+Icon=legacylauncher
+Exec=/usr/bin/legacylauncher
+StartupWMClass=net-legacylauncher-LegacyLauncher
+NoDisplay=false
+Categories=Game;
+StartupNotify=false
+Terminal=false
+
+Comment[ru]=Стабильный, быстрый и простой лаунчер для Minecraft
+Comment=Simple, light and fast Minecraft launcher
+
+Keywords[ru]=майнкрафт
+Keywords=minecraft
